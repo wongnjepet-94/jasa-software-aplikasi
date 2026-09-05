@@ -92,6 +92,9 @@
         color: #2563eb;
       }
 
+      .menu-toggle {
+        display: none;
+      }
       /* =========================
            HERO
         ========================= */
@@ -449,6 +452,37 @@
       @media (max-width: 768px) {
         .nav-menu {
           display: none;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          flex-direction: column;
+          gap: 0;
+          background: white;
+          border-bottom: 1px solid #e5e7eb;
+          padding: 10px 0;
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .nav-menu li {
+          width: 100%;
+        }
+
+        .nav-menu a {
+          display: block;
+          padding: 12px 5%;
+        }
+
+        .menu-toggle {
+          display: block;
+          border: none;
+          background: none;
+          font-size: 28px;
+          cursor: pointer;
+          color: #0f172a;
         }
 
         .hero h1 {
@@ -494,7 +528,7 @@
     <nav>
       <div class="container nav-container">
         <div class="logo">Wong Njepet <span>Software</span></div>
-
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#tentang">Tentang</a></li>
@@ -772,5 +806,11 @@
     <footer>
       <div class="container">© 2026 Wong Njepet Software.</div>
     </footer>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-menu").classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
