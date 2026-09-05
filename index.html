@@ -314,6 +314,62 @@
         font-size: 15px;
       }
 
+      /* PRODUK */
+
+      .products {
+        padding: 90px 0;
+        background: #f8fafc;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-top: 40px;
+      }
+
+      .product-card {
+        background: white;
+        padding: 30px;
+        border-radius: 16px;
+        border: 1px solid #e5e7eb;
+        transition: 0.3s;
+      }
+
+      .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+      }
+
+      .product-icon {
+        font-size: 42px;
+        margin-bottom: 15px;
+      }
+
+      .product-category {
+        font-size: 12px;
+        font-weight: bold;
+        color: #2563eb;
+        text-transform: uppercase;
+      }
+
+      .product-card h3 {
+        margin: 8px 0;
+        font-size: 22px;
+      }
+
+      .product-card p {
+        color: #64748b;
+        line-height: 1.7;
+      }
+
+      .product-btn {
+        display: inline-block;
+        margin-top: 15px;
+        color: #2563eb;
+        font-weight: 600;
+      }
+
       /* =========================
            PORTFOLIO
         ========================= */
@@ -538,6 +594,10 @@
         .section-title h2 {
           font-size: 30px;
         }
+
+        .product-grid {
+          grid-template-columns: 1fr;
+        }
       }
 
       @media (max-width: 480px) {
@@ -700,6 +760,52 @@
             <p>
               Perancangan database dan sistem pengelolaan data yang terstruktur.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section class="products" id="produk">
+      <div class="container">
+        <h2>Produk Software</h2>
+        <p>
+          Beberapa software yang telah kami kembangkan untuk membantu kebutuhan
+          bisnis dan organisasi.
+        </p>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="product-icon">💊</div>
+            <span class="product-category">Apotek</span>
+            <h3>ApotekKU</h3>
+            <p>
+              Sistem manajemen apotek untuk mengelola stok, transaksi, resep,
+              laporan, dan pelanggan.
+            </p>
+            <a href="#kontak" class="product-btn"> Lihat Produk → </a>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🏥</div>
+            <span class="product-category">Rumah Sakit</span>
+            <h3>SIMRS</h3>
+            <p>
+              Sistem informasi rumah sakit untuk mendukung pelayanan dan
+              operasional rumah sakit.
+            </p>
+            <a href="#kontak" class="product-btn"> Lihat Produk → </a>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">📦</div>
+            <span class="product-category">Management</span>
+            <h3>Inventory System</h3>
+            <p>
+              Sistem pengelolaan stok, gudang, barang masuk, barang keluar, dan
+              laporan inventory.
+            </p>
+            <a href="#kontak" class="product-btn"> Lihat Produk → </a>
           </div>
         </div>
       </div>
