@@ -54,6 +54,10 @@
         z-index: 1000;
       }
 
+      nav.scrolled {
+        box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+      }
+
       .nav-container {
         height: 70px;
         display: flex;
@@ -445,6 +449,28 @@
         font-size: 14px;
       }
 
+      .whatsapp-float {
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+        width: 58px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #25d366;
+        color: white;
+        font-size: 28px;
+        box-shadow: 0 5px 20px rgba(15, 23, 42, 0.2);
+        z-index: 999;
+        transition: 0.3s;
+      }
+
+      .whatsapp-float:hover {
+        transform: translateY(-4px) scale(1.05);
+      }
+
       /* =========================
            MOBILE
         ========================= */
@@ -518,6 +544,14 @@
 
         .hero h1 {
           font-size: 34px;
+        }
+
+        .whatsapp-float {
+          right: 18px;
+          bottom: 18px;
+          width: 52px;
+          height: 52px;
+          font-size: 24px;
         }
       }
     </style>
@@ -806,11 +840,29 @@
     <footer>
       <div class="container">© 2026 Wong Njepet Software.</div>
     </footer>
-
+    <a
+      href="https://wa.me/6282328235233"
+      target="_blank"
+      class="whatsapp-float"
+      aria-label="Chat WhatsApp"
+    >
+      💬
+    </a>
     <script>
       function toggleMenu() {
         document.querySelector(".nav-menu").classList.toggle("active");
       }
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+
+        if (window.scrollY > 20) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
     </script>
   </body>
 </html>
