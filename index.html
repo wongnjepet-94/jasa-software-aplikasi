@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Software | Jasa Pembuatan Aplikasi & Software</title>
+
+    <meta name="description"
+        content="Jasa pembuatan aplikasi, website, dan software custom sesuai kebutuhan bisnis Anda.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            font-size: 15px;
+            color: #475569;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #2563eb;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 70px;
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: #dbeafe;
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 54px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #64748b;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #cbd5e1;
+            color: #334155;
+            background: white;
+        }
+
+        .btn-outline:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #64748b;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .about-box {
+            padding: 35px;
+            border-radius: 15px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
+
+        .about-box h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: #f8fafc;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .service-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        /* =========================
+           PORTFOLIO
+        ========================= */
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .portfolio-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .portfolio-image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e0f2fe;
+            font-size: 50px;
+        }
+
+        .portfolio-content {
+            padding: 25px;
+        }
+
+        .portfolio-content h3 {
+            margin-bottom: 8px;
+        }
+
+        .portfolio-content p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* =========================
+           WHY US
+        ========================= */
+
+        .why {
+            background: #f8fafc;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .why-card strong {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 25px 0;
+            text-align: center;
+            background: #020617;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container nav-container">
+
+            <div class="logo">
+                Your Software
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    Custom Software Development
+                </div>
+
+                <h1>
+                    Solusi Digital untuk
+                    <span>Bisnis Anda</span>
+                </h1>
+
+                <p>
+                    Jasa pembuatan aplikasi, website, dan software
+                    custom sesuai kebutuhan bisnis Anda.
+                    Dari ide sederhana hingga menjadi sistem yang siap digunakan.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#portfolio" class="btn btn-primary">
+                        Lihat Portfolio
+                    </a>
+
+                    <a href="#kontak" class="btn btn-outline">
+                        Konsultasi Gratis
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TENTANG -->
+    <section class="about" id="tentang">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Tentang Saya</h2>
+                <p>Membangun software sesuai kebutuhan, bukan sekadar template.</p>
+            </div>
+
+            <div class="about-grid">
+
+                <div>
+                    <h3>Software yang dibuat untuk kebutuhan nyata.</h3>
+
+                    <p>
+                        Saya membantu bisnis dan organisasi membuat
+                        aplikasi yang sesuai dengan proses kerja mereka.
+                    </p>
+
+                    <p>
+                        Mulai dari aplikasi sederhana hingga sistem
+                        informasi yang memiliki banyak modul dan pengguna.
+                    </p>
+                </div>
+
+                <div class="about-box">
+
+                    <h4>Custom Development</h4>
+
+                    <p>
+                        Setiap bisnis memiliki kebutuhan yang berbeda.
+                        Karena itu software dapat dirancang dan dikembangkan
+                        sesuai alur kerja yang Anda butuhkan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LAYANAN -->
+    <section class="services" id="layanan">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Layanan</h2>
+
+                <p>
+                    Beberapa layanan yang dapat saya bantu.
+                </p>
+
+            </div>
+
+            <div class="service-grid">
+
+                <div class="service-card">
+
+                    <div class="service-icon">💻</div>
+
+                    <h3>Web Application</h3>
+
+                    <p>
+                        Pembuatan aplikasi berbasis web
+                        untuk kebutuhan bisnis dan organisasi.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">📱</div>
+
+                    <h3>Mobile Application</h3>
+
+                    <p>
+                        Pengembangan aplikasi Android
+                        sesuai kebutuhan dan proses bisnis.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">⚙️</div>
+
+                    <h3>Custom Software</h3>
+
+                    <p>
+                        Sistem informasi dan software custom
+                        yang dirancang sesuai kebutuhan pengguna.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">📊</div>
+
+                    <h3>Dashboard</h3>
+
+                    <p>
+                        Dashboard monitoring dan laporan
+                        untuk membantu pengambilan keputusan.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🗄️</div>
+
+                    <h3>Database System</h3>
+
+                    <p>
+                        Perancangan database dan sistem
+                        pengelolaan data yang terstruktur.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🔧</div>
+
+                    <h3>Maintenance</h3>
+
+                    <p>
+                        Perbaikan, pengembangan dan penambahan
+                        fitur pada aplikasi yang sudah ada.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Portfolio</h2>
+
+                <p>
+                    Beberapa contoh aplikasi yang pernah dibuat.
+                </p>
+
+            </div>
+
+
+            <div class="portfolio-grid">
+
+                <div class="portfolio-card">
+
+                    <div class="portfolio-image">
+                        🏥
+                    </div>
+
+                    <div class="portfolio-content">
+
+                        <h3>Hospital Information System</h3>
+
+                        <p>
+                            Sistem informasi untuk membantu
+                            pengelolaan data dan proses operasional.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-card">
+
+                    <div class="portfolio-image">
+                        💊
+                    </div>
+
+                    <div class="portfolio-content">
+
+                        <h3>Pharmacy System</h3>
+
+                        <p>
+                            Sistem pengelolaan apotek,
+                            stok obat, transaksi dan laporan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="portfolio-card">
+
+                    <div class="portfolio-image">
+                        📦
+                    </div>
+
+                    <div class="portfolio-content">
+
+                        <h3>Inventory System</h3>
+
+                        <p>
+                            Sistem pengelolaan barang,
+                            stok, mutasi dan laporan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY US -->
+    <section class="why">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Kenapa Memilih Saya?</h2>
+
+            </div>
+
+            <div class="why-grid">
+
+                <div class="why-card">
+
+                    <strong>Custom</strong>
+
+                    <p>
+                        Dibuat sesuai kebutuhan Anda.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <strong>Responsive</strong>
+
+                    <p>
+                        Dapat digunakan melalui berbagai perangkat.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <strong>Support</strong>
+
+                    <p>
+                        Siap membantu setelah aplikasi digunakan.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <strong>Terjangkau</strong>
+
+                    <p>
+                        Solusi disesuaikan dengan kebutuhan dan budget.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- KONTAK -->
+    <section class="contact" id="kontak">
+
+        <div class="container">
+
+            <h2>Punya Ide Aplikasi?</h2>
+
+            <p>
+                Ceritakan kebutuhan Anda.
+                Mari diskusikan bagaimana ide tersebut
+                dapat dibuat menjadi aplikasi.
+            </p>
+
+            <!-- GANTI NOMOR WHATSAPP -->
+            <a
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                class="btn btn-primary"
+            >
+                💬 Konsultasi via WhatsApp
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+
+            © 2026 Your Software.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
